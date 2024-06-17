@@ -1,0 +1,86 @@
+#wpfooter {
+    display: none;
+}
+.button-primary, .button-secondary {
+    /* justify-content: space-around; */
+    max-width: 150px;
+}
+
+.shortcode-alert {
+    display: none;
+    color: green;
+}
+
+form#yt-vs {
+    /* width: 50%; */
+    max-width: 400px;
+    margin: 0;
+    gap: 10px;
+    display: flex;
+    flex-flow: column;
+}
+
+.setting-option {
+    display: flex;
+    justify-content: space-between;
+}
+.video-title {
+    position: relative;
+    overflow: hidden;
+}
+
+.delete-video {
+    position: absolute;
+    right: 5%;
+    top: 0;
+    padding: 2px 10px;
+    background-color: #dc3232; /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    cursor: pointer;
+    border: none;
+    
+}
+
+.delete-video:hover {
+    background-color: #b22c2c; /* Set your desired background color on hover */
+}
+.video-list {
+    margin-bottom: 5px;
+}
+.video-list a {
+    margin-left: 10px;
+}
+.video-list input {
+    margin-right: 10px;
+}
+.video-list-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.video-list-table th, .video-list-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Добавляем стили для мобильной версии */
+@media only screen and (max-width: 767px) {
+    form#yt-vs {
+        width: 100%;
+    }
+    .video-title.mobile-view {
+        white-space: nowrap; /* Запрещаем перенос строк */
+        overflow: hidden;    /* Обрезаем текст, который не помещается */
+        text-overflow: ellipsis; /* Добавляем многоточие для обозначения обрезанного текста */
+        max-width: 100%;     /* Устанавливаем максимальную ширину */
+    }
+    .video-title.mobile-view:hover {
+        white-space: normal; /* При наведении отображаем полный текст */
+        overflow: visible;
+        text-overflow: unset;
+    }
+    .delete-video {
+        right: 0;
+    }
+}
